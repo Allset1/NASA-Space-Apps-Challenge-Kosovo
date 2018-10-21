@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Artsy Space</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/fancybox.css" >
+  <script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+</head>
+<body>
+
+<div id="particles-js"></div>
+<div class="w3ls-pos">
+
+	<div class="container">
+		<h1>Turn Space Into Art</h1>
+		<div id="result">
+			<h2>Your artworks</h2>
+		<div id="artwork"></div>
+		</div>
+		<h2>1. Choose picture and quality</h2>
+		<select id="qualitySelect">
+		  <option value="512">Low Quality</option>
+		  <option value="1080" selected="selected">Medium Quality</option>
+		  <option value="1980">High Quality</option>
+		</select>
+		<label>
+          <input id="optimzeForPrint" type="checkbox" value="false">
+          Optimize for print
+        </label>
+        <label>
+          <input id="useOriginalColors" type="checkbox" value="false">
+          Use original colors
+        </label>
+		<div id="upload">
+			<input type="file" onchange="onFileSelected(event)">
+		</div>
+		<div id="progress-wrapper">
+			<img id="progressbar" src="./img/loading.gif" alt="loading"></img>
+		</div>
+		<div id="styles">
+			<h2>2. Choose art style</h2>
+			<div id="style-list"></div>
+		</div>
+	</div>
+</div>
+
+  	<!-- Deep Art Effects lib -->
+	<script type="text/javascript" src="js/client/axios.standalone.js"></script>
+	<script type="text/javascript" src="js/client/hmac-sha256.js"></script>
+	<script type="text/javascript" src="js/client/sha256.js"></script>
+	<script type="text/javascript" src="js/client/hmac.js"></script>
+	<script type="text/javascript" src="js/client/enc-base64.js"></script>
+	<script type="text/javascript" src="js/client/url-template.js"></script>
+	<script type="text/javascript" src="js/client/sigV4Client.js"></script>
+	<script type="text/javascript" src="js/client/apiGatewayClient.js"></script>
+	<script type="text/javascript" src="js/client/simpleHttpClient.js"></script>
+	<script type="text/javascript" src="js/client/utils.js"></script>
+	<script type="text/javascript" src="js/client/apigClient.js"></script>
+
+  	<!-- JQuery lib -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Fancybox for artwork preview -->
+	<script src="js/fancybox.js"></script>
+
+	<!-- Image tools -->
+	<script src="js/imageTools.js"></script>
+
+	<!-- Site script-->
+	<script src="js/scripts.js"></script>
+	<script src='js/particles.min.js'></script>
+	<script src="js/index.js"></script>
+
+</body>
+</html>
